@@ -70,87 +70,47 @@
 
    <hr width="75%" style="margin: auto; margin-top: 30px;">
 
-   <?php require "./scripts/news_card.php"; ?>
-
    <!--Карточка 1-->
 
-   <div class="container my-5">
-      <div class="row justify-content-center">
-         <div class="col-9">
-            <div class="flex-column card mb-3" style="max-width: 1040px;">
-               <div class="row g-0">
-                  <div class="col-md-4">
-                     <img src="./assets/images/новость1.jpg" class="img-fluid rounded-start">
-                  </div>
-                  <div class="col-md-8">
-                     <div class="card-body">
-                        <h5 class="container card-title fs-4"><a href="news_1.html" class="text-decoration-none">Кот занял первое место в Книге рекордов Гиннеса</a></h5>
-                        <p class="card-text">Котик по имени Мотимару стал самым популярным котом на YouTube.</p>
-                        <p class="card-text">Японский кот Мотимару шотландской породы набрал на видеохостинге более 600 миллионов просмотров, за
-                           что удостоен награды и занесен в книгу рекордов Гиннеса. Это самый просматриваемый на YouTube
-                           представитель кошачьих.</p>
-                        <p class="card-text"><small class="text-muted"> 15.03.23</small></p>
-                     </div>
-                  </div>
-               </div>
-            </div>
+   <?php
+   require_once "./scripts/news_card.php";
+   $title = 'Кот занял первое место в Книге рекордов Гиннеса';
+   $img_uri = './assets/images/новость1.jpg';
+   $description = 'Котик по имени Мотимару стал самым популярным котом на YouTube.';
+   $text = 'Японский кот Мотимару шотландской породы набрал на видеохостинге более 600 миллионов просмотров, за
+      что удостоен награды и занесен в книгу рекордов Гиннеса. Это самый просматриваемый на YouTube
+      представитель кошачьих.';
+   $date = ' 15.03.23';
+   newsCard($title, $img_uri, $description, $text, $date);
+   ?>
 
-         </div>
-      </div>
-   </div>
 
    <hr width="75%" style="margin: auto; margin-top: 30px;">
 
    <!--Карточка 2-->
 
-   <div class="container my-5">
-      <div class="row justify-content-center">
-         <div class="col-9">
-            <div class="flex-column card mb-3" style="max-width: 1040px;">
-               <div class="row d-flex flex-row-reverse g-0"">
-            <div class=" col-md-5">
-                  <img src="./assets/images/новость2.jpg" class="img-fluid rounded-start">
-               </div>
-               <div class="col-md-7">
-                  <div class="card-body">
-                     <h5 class="container card-title fs-4"><a href="news_2.html" class="text-decoration-none"> Кот по кличке Семён наелся Китикета и не может встать</a></h5>
-                     <p class="card-text"> В Новосибирске кот по кличке Семён парализовал движение на ул. Красный проспект в сторону городского
-                        Аэропорта... </p>
-                     <p class="card-text"><small class="text-muted">01.03.23</small></p>
-                  </div>
-               </div>
-            </div>
-         </div>
-
-      </div>
-   </div>
-   </div>
+   <?php
+   $title = 'Кот по кличке Семён наелся Китикета и не может встать';
+   $description = '';
+   $text = ' В Новосибирске кот по кличке Семён парализовал движение на ул. Красный проспект в сторону городского
+   Аэропорта...';
+   $date = '01.03.23';
+   $img_uri = './assets/images/новость2.jpg';
+   newsCard($title, $img_uri, $description, $text, $date, true);
+   ?>
 
    <hr width="75%" style="margin: auto; margin-top: 20px;">
 
    <!--Карточка 3-->
 
-   <div class="container my-5">
-      <div class="row justify-content-center">
-         <div class="col-9">
-            <div class="flex-column card mb-3" style="max-width: 1040px;">
-               <div class="row g-0"">
-              <div class=" col-md-4">
-                  <img src="./assets/images/новость3.1.jpg" class="img-fluid rounded-start">
-               </div>
-               <div class="col-md-8">
-                  <div class="card-body">
-                     <h5 class="container card-title fs-4 "><a href="news_3.html" class="text-decoration-none"> В Барнауле одна компания официально трудоустроила кошку.</a></h5>
-                     <p class="card-text">Всемирный день кошек обернулся для бенгальской красавицы повышением по службе...</p>
-                     <p class="card-text"><small class="text-muted">31.02.23</small></p>
-                  </div>
-               </div>
-            </div>
-         </div>
-
-      </div>
-   </div>
-   </div>
+   <?php
+   $title = 'В Барнауле одна компания официально трудоустроила кошку.';
+   $description = '';
+   $text = 'Всемирный день кошек обернулся для бенгальской красавицы повышением по службе...';
+   $date = '31.02.23';
+   $img_uri = './assets/images/новость3.1.jpg';
+   newsCard($title, $img_uri, $description, $text, $date);
+   ?>
 
    <!--Подвал-->
 
