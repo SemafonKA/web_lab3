@@ -1,0 +1,96 @@
+body {
+    font: 10pt Arial, Helvetica, sans-serif;
+    /* Шрифт на веб-странице */
+    /* background: url(https://catherineasquithgallery.com/uploads/posts/2021-02/1613643587_8-p-fon-dlya-prezentatsii-odnotonnii-pastelnii-8.png) no-repeat; Цвет фона */
+    -webkit-background-size: 100%;
+    /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%;
+    /* Opera 9.6+ */
+    background-size: 100%;
+    /* Современные браузеры */
+    background-color: #fff3cd59;
+    background-size: cover;
+    /* Масштабируем фон */
+}
+
+.container.carusel {
+    width: 60%;
+    height: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container.footer {
+    background-color: #e7ebada6;
+
+}
+
+.container.card-title {
+    text-decoration: none;
+    /*Убираем стандартное подчёркивание ссылки если оно ещё не убрано*/
+}
+
+.container.header {
+    background-color: #e7ebada6;
+}
+
+.d-flex flex-wrap {
+    width: 60%;
+    height: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*header style*/
+.header {
+    background-image: img;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.container.card-title {
+    text-align: center;
+}
+
+.container.about {
+    margin: 4em 0;
+    padding: 1em;
+    position: relative;
+}
+
+/* .about h1{
+    color:#F97300;
+    margin: 2em;
+   } */
+.about img {
+    height: 100%;
+    width: 100%;
+    border-radius: 20%
+}
+
+.about span {
+    /* display: block; */
+    color: #888;
+    /* position: absolute;
+    left: 115px; */
+}
+
+.about p {
+    display: block;
+    color: #888
+}
+
+.about .desc {
+    padding: 2em;
+    border-left: 4px solid #10828C;
+}
+
+.about .desc h3 {
+    color: #10828C;
+}
+
+.about .desc p {
+    line-height: 2;
+    color: #888;
+}
