@@ -6,21 +6,21 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
-   <link href="style.css" type="text/css" rel="stylesheet" />
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+   <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+   <link href="/style.css" type="text/css" rel="stylesheet">
 
    <title> Котики планеты Земля </title>
 </head>
 
 <body >
    <?php 
-      require_once 'scripts/header.php';
+      require_once '../scripts/header.php';
    ?>
-
+   
    <div class="container">
-      <form action="./scripts/db/push_news.php" method="post" class="my-4" enctype="multipart/form-data">
+      <form action="../scripts/db/push_news.php" method="post" class="my-4" enctype="multipart/form-data">
          <lable class="form-lable">Заголовок</lable>
          <input type="text" class="form-control bg-body-secondary" name="Title" maxlength="256" required>
          <lable class="form-lable">Короткое описание</lable>
@@ -38,7 +38,7 @@
    </div>
 
    <?php
-      require_once 'scripts/footer.php';
+      require_once '../scripts/footer.php';
    ?>
 </body>
 

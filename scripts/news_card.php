@@ -1,14 +1,15 @@
 <?php
 
-    function newsCard($id, $title, $imgUri, $description, $date, $reverse = false) {
-        $rowParams = "";
-        if ($reverse == true) {
-            $rowParams = " flex-row-reverse ";
-        }
+function newsCard($id, $title, $imgUri, $description, $date, $reverse = false)
+{
+    $rowParams = "";
+    if ($reverse == true) {
+        $rowParams = " flex-row-reverse ";
+    }
 
-        $refLink = "./page.php?Id=$id";
+    $refLink = "/pages/page.php?Id=$id";
 
-        echo "
+    echo "
         <div class='container my-5'>
             <div class='row justify-content-center'>
                 <div class='col-9'>
@@ -31,7 +32,4 @@
             </div>
         </div>
         ";
-    }
-
-?>
-
+}
