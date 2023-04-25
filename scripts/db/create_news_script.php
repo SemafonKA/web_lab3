@@ -21,7 +21,7 @@ if (isset($_POST['add'])) {
          move_uploaded_file($imgTmpDest, $imgDest);
          $imgDest = '/assets/images/' . $imgTrueName;
       } else {
-         die("Error uploading image to server" . $imgError);
+         header('Location: /pages/template_admin_notify.php?message=' . "Ошибка загрузки изображения на сервер: " . $imgError);
       }
    }
 
@@ -30,9 +30,6 @@ if (isset($_POST['add'])) {
    $sqlPrepaired = $conn->prepare($sql);
 
    $title = $_POST['Title'];
-   if (!isset($_POST['Description'])) {
-      die("Description is required");
-   }
    $desc = $_POST['Description'];
    $text = $_POST['Text'];
    $date = $_POST['Date'];
@@ -44,6 +41,9 @@ if (isset($_POST['add'])) {
    $sqlPrepaired->bind_param('ssssss', $title, $desc, $text, $imgDest, $date, $ulink);
    $sqlPrepaired->execute();
 
-   header('Location: /pages/admin.php');
+   header('Location: /pages/template_admin_notify.php?message=' . "Новость успешно опубликована");
    die();
 }
+
+
+header('Location: /pages/template_admin_notify.php?message=' . "Ошибка исполнения скрипта");

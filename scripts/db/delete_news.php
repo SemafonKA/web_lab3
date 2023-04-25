@@ -26,7 +26,10 @@ if (isset($_POST['delete-btn'])) {
    $sqlPrepaired = $conn->prepare($sql);
 
    $sqlPrepaired->bind_param('i', $id);
-   $sqlPrepaired->execute();
+   if ($sqlPrepaired->execute()) {
+      header('Location: /pages/template_admin_notify.php?message=' . "Новость удалена успешно");
+      die();
+   }
 }
-header('Location: /pages/delete_news_page.php');
-die();
+
+header('Location: /pages/template_admin_notify.php?message=' . "Произошла ошибка удаления новости, попробуйте ещё раз");

@@ -6,12 +6,10 @@ if ($conn->connect_error) {
 }
 
 if (!isset($_POST['change'])) {
-   die('Скрипт запущен неверно');
+   header('Location: /pages/template_admin_notify.php?message=' . "Ошибка запуска скрипта");
+   die();
 }
 
-if (!isset($_POST['id'])) {
-   die('id не задан');
-}
 $id = intval($_POST['id']);
 
 // Получаем старые результаты новости (для проверки, что изменилось)
@@ -51,7 +49,7 @@ if (isset($_FILES['img'])) {
 
          $sqlPrepaired->close();
       } else {
-         die("Ошибка загрузки изображения на сервер" . $imgError);
+         header('Location: /pages/template_admin_notify.php?message=' . "Ошибка загрузки изображения на сервер: " . $imgError);
       }
    }
 }
@@ -73,7 +71,9 @@ $sql = "UPDATE news SET Title = ?, Description = ?, Text = ?, YoutubeLink = ?, I
 $sqlPrepaired = $conn->prepare($sql);
 
 $sqlPrepaired->bind_param('sssssi', $newTitle, $newDescription, $newText, $newYoutubeLink, $ImgUri, $id);
-$sqlPrepaired->execute();
+if ($sqlPrepaired->execute()) {
+   header('Location: /pages/template_admin_notify.php?message=' . "Новость успешно обновлена");
+} else {
+   header('Location: /pages/template_admin_notify.php?message=' . "Ошибка обновления записи в БД");
+}
 
-
-header('Location: /pages/admin.php');

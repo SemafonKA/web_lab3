@@ -93,3 +93,100 @@ table {
     overflow: auto;
     /* overflow-y: scroll; */
 }
+
+.page-selector-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: fit-content; */
+}
+
+.page-selector-area .page-selector-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    font-size: 1.2em;
+    margin: 0 5px;
+    /* padding: 0.3em 0.3em; */
+    width: 3em;
+    height: 3em;
+}
+
+.page-selector-area .page-selector-item:hover {
+    border: 1px solid rgb(210, 210, 210);
+    border-radius: 50%;
+}
+
+.page-selector-area .page-selector-item.current {
+    font-weight: 600;
+    border: 1px solid rgb(210, 210, 210);
+    border-radius: 50%;
+}
+
+.slider img {
+    object-fit: contain;
+    object-position: 50% 50%;
+    height: 60%;
+}
+
+.container-slider {
+    height: 60vh;
+}
+
+.slider {
+    height: 100%;
+}
+
+.slick-list {
+    height: 100%;
+}
+
+.slick-track {
+    height: 100%;
+}
+
+.slider .row {
+    margin-left: 0;
+    margin-right: 0;
+    height: 100%;
+}
+
+.slider .row .card {
+    height: 100%;
+}
+
+#viewport {
+    display: flex;
+    flex-direction: column;
+    height: 75vh;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .login-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 2em 2em 1em 2em;
+    background-color: #e7ebada6;
+ }
+
+ .login-card-header {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+ }
+
+ .login-card-form {
+    font-size: 1.2em;
+    margin: 10px 0px;
+ }
+
+ .login-card-form input.form-control {
+    background-color: #ffffff80;
+ }
